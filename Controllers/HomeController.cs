@@ -38,7 +38,7 @@ namespace BlogWithAuthentication
                 posts = dbAccess.GetPosts().OrderByDescending(p => DateTime.Parse(p.TimeStamp)).ToList();
             }
 
-            return View("~/Views/Home/Index.cshtml", posts);
+            return View("Index", posts);
         }
 
         [HttpPost]
@@ -50,13 +50,17 @@ namespace BlogWithAuthentication
                 posts = dbAccess.GetPosts().OrderByDescending(p => DateTime.Parse(p.TimeStamp)).ToList();
             }
 
-            return View("~/Views/Home/Index.cshtml", posts);
+            return View("Index", posts);
         }
 
         [HttpPost]
-        public IActionResult UpdateOnUpdatePage(PostModel post)
+        public IActionResult UpdateOnUpdatePage(string id)
         {
-            return View("~/Views/Home/Update.cshtml", post);
+            PostModel post = (from p in dbAccess.GetPosts()
+                             where p.Id == id
+                             select p).First();
+
+            return View("Update", post);
         }
 
         [HttpPost]
@@ -68,7 +72,7 @@ namespace BlogWithAuthentication
                 posts = dbAccess.GetPosts().OrderByDescending(p => DateTime.Parse(p.TimeStamp)).ToList();
             }
 
-            return View("~/Views/Home/Index.cshtml", posts);
+            return View("Index", posts);
         }
     }
 }

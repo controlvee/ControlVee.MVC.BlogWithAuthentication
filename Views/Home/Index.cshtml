@@ -37,7 +37,7 @@
                                 {
                                     <button type="submit">Delete</button>
                                 }
-                                @using (Html.BeginForm("UpdateOnUpdatePage", "Home", item, FormMethod.Post))
+                                @using (Html.BeginForm("UpdateOnUpdatePage", "Home", new { id = item.Id }, FormMethod.Post))
                                 {
                                     <button type="submit">Edit</button>
                                 }
