@@ -107,14 +107,14 @@ body {
 .modal-title-create {
     font-size: medium;
     font-weight: normal;
-    color: #fff;
+    color: #2d2d30;
     float: left;
 }
 
 .modal-content-create-title {
     font-size: small;
     font-weight: normal;
-    color: #fff;
+    color: #2d2d30;
     float: left;
     background-color: transparent;
     border: solid;
@@ -127,7 +127,7 @@ body {
 .modal-content-create-content {
     font-size: small;
     font-weight: normal;
-    color: #fff;
+    color: #2d2d30;
     float: left;
     background-color: transparent;
     border: solid;

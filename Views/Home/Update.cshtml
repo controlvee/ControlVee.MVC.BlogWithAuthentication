@@ -5,14 +5,17 @@
         <td>
             @using (Html.BeginForm("Update", "Home", Model, FormMethod.Post))
             {
-                <div class="col-form-label">@Model.Id</div>
-                <div class="col-form-label">@Model.Title</div>
-                <div class="col-form-label">@Model.TimeStamp</div>
-                <label class="col-form-label">Title:</label>
-                @Html.TextBoxFor(model => model.Title)
-                <label class="col-form-label">Content:</label>
-                @Html.TextAreaFor(model => model.Content)
-                <button type="submit">Submit</button>
+                <div class="row">
+                    <button type="submit">Submit Changes</button>
+                </div>
+                <label class="modal-title-create">Title:</label>
+                <div>
+                    @Html.TextBoxFor(model => model.Title, new { @class = "modal-content-create-title" })
+                </div>
+                <label class="modal-title-create">Content:</label>
+                <div class="modal-content-create">
+                    @Html.TextAreaFor(model => model.Content, new { @class = "modal-content-create-content" })
+                </div>
             }
         </td>
     </tr>
