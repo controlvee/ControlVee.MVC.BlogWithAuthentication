@@ -1,0 +1,23 @@
+﻿@model BlogWithAuthentication.Models.PostModel
+
+<table class="table">
+    <tr>
+        <td>
+
+            @using (Html.BeginForm("Create", "Home", FormMethod.Post))
+            {
+                <div class="row">
+                    <button type="submit">Create Post</button>
+                </div>
+                <label class="modal-title-create">Title:</label>
+                <div>
+                    @Html.TextBoxFor(model => model.Title, new { @class = "modal-content-create-title" })
+                </div>
+                <label class="modal-title-create">Content:</label>
+                <div class="modal-content-create">
+                    @Html.TextAreaFor(model => model.Content, new { @class = "modal-content-create-content" })
+                </div>
+            }
+        </td>
+    </tr>
+</table>
