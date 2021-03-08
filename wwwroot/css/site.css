@@ -62,8 +62,8 @@ html {
 body {
     /* Margin bottom by footer height */
     margin: 60px;
-    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #f1f3f4;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
 }
 .footer {
   position: absolute;
@@ -92,14 +92,14 @@ body {
 .modal-header {
     font-size: large;
     font-weight: bold;
-    color: #084f61;
-    background-color: #f1f3f4;
+    color: #fff;
+    background-color: #007acc;
 }
 
 .modal-title {
     font-size: small;
     font-weight: normal;
-    color: #084f61;
+    color: #808080;
     float: left;
     background-color: transparent;
 }
@@ -107,7 +107,7 @@ body {
 .modal-title-create {
     font-size: medium;
     font-weight: normal;
-    color: #2d2d30;
+    color: #000000;
     float: left;
 }
 
@@ -118,7 +118,7 @@ body {
     float: left;
     background-color: transparent;
     border: solid;
-    border-color: white;
+    border-color:#007acc;
     border-width: 2px;
     border-radius: 2px;
     width: 100%;
@@ -131,7 +131,7 @@ body {
     float: left;
     background-color: transparent;
     border: solid;
-    border-color: white;
+    border-color: #007acc;
     border-width: 2px;
     border-radius: 2px;
     width: 100%;
