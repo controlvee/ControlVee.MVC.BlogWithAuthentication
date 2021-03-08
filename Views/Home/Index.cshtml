@@ -14,22 +14,20 @@
         <div class="row">
             @foreach (var item in Model)
             {
-                <div class="container">
                     <div class="card">
                         <div class="modal-header">
                             @item.Title
-                            <div class="modal-title">
-                                <mark>last update: @item.TimeStamp</mark>
-                            </div>
                         </div>
                         <div class="modal-body">
                             <div class="modal-content">
-                                @item.Content
+                                <img src="~/lib/background-1430103__340.webp"/>
                             </div>
+                            @item.Content.Substring(0, 50)...
                         </div>
                         <div class="modal-footer">
+                           
                             <div class="modal-title">
-                                @item.Id.ToString()
+                                <mark>last update: @item.TimeStamp</mark>
                             </div>
                             @if (SignInManager.IsSignedIn(User))
                             {
@@ -44,7 +42,6 @@
                             }
                         </div>
                     </div>
-                </div>
             }
         </div>
     </div>
